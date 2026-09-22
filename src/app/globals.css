@@ -2,25 +2,40 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #232323;
+
+  /* Red Bed Sleep brand palette — PROPOSED, from Eli's ChatGPT planning
+     conversation. Not yet confirmed as final branding. Swap when Eli
+     approves real brand colors. */
+  --color-brand-red: #711f32;
+  --color-brand-red-dark: #591827;
+  --color-brand-charcoal: #232323;
+  --color-brand-ivory: #f4f0e9;
+  --color-brand-sand: #b6a38d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-brand-red: var(--color-brand-red);
+  --color-brand-red-dark: var(--color-brand-red-dark);
+  --color-brand-charcoal: var(--color-brand-charcoal);
+  --color-brand-ivory: var(--color-brand-ivory);
+  --color-brand-sand: var(--color-brand-sand);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #171412;
+    --foreground: #f4f0e9;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
