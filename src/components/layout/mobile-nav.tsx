@@ -20,7 +20,7 @@ export function MobileNav() {
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((v) => !v)}
-        className="flex h-10 w-10 items-center justify-center rounded-full text-brand-charcoal hover:bg-brand-charcoal/5"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10"
       >
         <span className="sr-only">Toggle menu</span>
         <svg

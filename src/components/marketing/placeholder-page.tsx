@@ -8,6 +8,8 @@ type PlaceholderPageProps = {
   /** Shown in a muted callout — use for what's still pending (specs, photos, copy). */
   note?: string;
   id?: string;
+  /** Optional demo content (e.g. component previews with mock data) rendered below the note. */
+  children?: React.ReactNode;
 };
 
 /**
@@ -21,6 +23,7 @@ export function PlaceholderPage({
   description,
   note,
   id,
+  children,
 }: PlaceholderPageProps) {
   return (
     <Container id={id} className="py-24 sm:py-32">
@@ -30,6 +33,7 @@ export function PlaceholderPage({
           {note}
         </p>
       ) : null}
+      {children ? <div className="mt-12">{children}</div> : null}
       <div className="mt-8">
         <Button href="/" variant="outline" size="sm">
           Back to home

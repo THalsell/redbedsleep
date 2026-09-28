@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import { mainNav, siteConfig } from "@/lib/site-config";
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { MobileNav } from "@/components/layout/mobile-nav";
 
@@ -11,13 +11,18 @@ import { MobileNav } from "@/components/layout/mobile-nav";
  */
 export function SiteHeader() {
   return (
-    <header className="relative z-40 border-b border-brand-charcoal/10 bg-white">
-      <Container className="flex h-16 items-center justify-between lg:h-20">
-        <Link
-          href="/"
-          className="text-lg font-semibold tracking-tight text-brand-charcoal"
-        >
-          {siteConfig.name}
+    <header className="relative z-40 border-b border-white/10 bg-brand-charcoal">
+      <Container className="flex h-28 items-center justify-between lg:h-32">
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Image
+            src="/Red_Bed_logo_option_1_Transparent.png"
+            alt={siteConfig.name}
+            width={448}
+            height={448}
+            priority
+            className="h-24 w-24 lg:h-28 lg:w-28"
+          />
+          <span className="sr-only">{siteConfig.name}</span>
         </Link>
 
         <nav className="hidden lg:block">
@@ -26,7 +31,7 @@ export function SiteHeader() {
               <li key={item.label} className="group relative">
                 <Link
                   href={item.href}
-                  className="flex items-center py-8 text-sm font-medium text-brand-charcoal hover:text-brand-red"
+                  className="flex items-center py-8 text-sm font-medium text-white/90 hover:text-brand-red"
                 >
                   {item.label}
                 </Link>
@@ -60,9 +65,19 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button href="/mattresses" size="sm" className="hidden sm:inline-flex">
-            Shop Mattresses
-          </Button>
+          <Link
+            href="/cart"
+            aria-label="Cart"
+            className="flex h-12 w-12 items-center justify-center rounded-full hover:bg-white/10"
+          >
+            <Image
+              src="/shopping-cart-icon.png"
+              alt=""
+              width={64}
+              height={64}
+              className="h-8 w-8 brightness-0 invert"
+            />
+          </Link>
           <MobileNav />
         </div>
       </Container>

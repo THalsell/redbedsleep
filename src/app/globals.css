@@ -4,11 +4,12 @@
   --background: #ffffff;
   --foreground: #232323;
 
-  /* Red Bed Sleep brand palette — PROPOSED, from Eli's ChatGPT planning
-     conversation. Not yet confirmed as final branding. Swap when Eli
-     approves real brand colors. */
-  --color-brand-red: #711f32;
-  --color-brand-red-dark: #591827;
+  /* Red Bed Sleep brand palette. Red is sampled directly from
+     public/Red-Bed-logo-option-1.png (dominant red pixel ~#FB0114) so the
+     site matches the logo. Charcoal/ivory/sand are still the PROPOSED
+     values from Eli's ChatGPT planning conversation — not yet confirmed. */
+  --color-brand-red: #fb0114;
+  --color-brand-red-dark: #bc010f;
   --color-brand-charcoal: #232323;
   --color-brand-ivory: #f4f0e9;
   --color-brand-sand: #b6a38d;
